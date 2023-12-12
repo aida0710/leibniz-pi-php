@@ -2,8 +2,10 @@
 
 function calculatePi($terms) : float|int {
     $pi = 0.0;
+    $operator = 1;
     for ($i = 0; $i < $terms; $i++) {
-        $pi += 1 / (2 * $i + 1) * pow(-1, $i);
+        $pi += $operator / (2 * $i + 1);
+        $operator *= -1;
     }
     return 4 * $pi;
 }
